@@ -5,32 +5,8 @@
 
 <section id="sources" class="sources">
 	<div class="inner">
-		<p class="eyebrow">Sources &amp; method</p>
-		<h2>How this was built</h2>
-
-		<div class="note">
-			<p>
-				The data is the skeleton; the people are the heart. To keep faith with both, this piece
-				holds two rules in plain sight:
-			</p>
-			<ul>
-				<li>
-					<b>Real, sourced people</b> carry on-screen attribution. Where an immersive “a day in the
-					life” beat is needed, it is shown as a <b>clearly-labeled representative scene</b>, grounded
-					in documented conditions. Never a composite passed off as one real person, never an
-					invented quote put in a real person's mouth.
-				</li>
-				<li>
-					The <b>hours-of-power series is assembled</b> from ZESCO announcements and news reports, not
-					measured, and is labeled approximate wherever it appears. Province severities are
-					indicative of the well-reported pattern, not precise pixel values.
-				</li>
-			</ul>
-			<p class="static">
-				All data is pre-processed offline and baked into static assets; the page makes no live API
-				calls at runtime.
-			</p>
-		</div>
+		<p class="eyebrow">Provenance</p>
+		<h2>Sources</h2>
 
 		<ul class="srclist">
 			{#each list as s (s.id)}
@@ -64,30 +40,6 @@
 		font-weight: 300;
 		font-size: clamp(1.8rem, 4vw, 2.6rem);
 		margin: 0.4rem 0 1.6rem;
-	}
-	.note {
-		font-family: var(--font-ui);
-		color: var(--ink);
-		line-height: 1.65;
-		border-left: 2px solid var(--copper);
-		padding-left: 1.1rem;
-		margin-bottom: 2.4rem;
-	}
-	.note ul {
-		margin: 0.8rem 0;
-		padding-left: 1.1rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.7rem;
-	}
-	.note b {
-		color: var(--bone);
-		font-weight: 500;
-	}
-	.static {
-		color: var(--muted);
-		font-size: 0.92em;
-		margin-top: 0.8rem;
 	}
 	.srclist {
 		list-style: none;

@@ -40,7 +40,7 @@
 		</p>
 		<p class="muted">
 			Built with SvelteKit, D3 and Scrollama. All data pre-processed offline; no live API calls at
-			runtime. <a href="#sources">Sources &amp; method ↑</a>
+			runtime. <a href="#sources">Sources ↑</a>
 		</p>
 	</footer>
 </main>
