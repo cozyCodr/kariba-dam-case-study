@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When the Lake Ran Dry — concept scene</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Space+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#0E1419;      /* blackout ground */
+    --night-2:#141C24;
+    --water:#3E7E97;      /* Zambezi water */
+    --water-deep:#27566A;
+    --copper:#D2853F;     /* electricity / light */
+    --copper-bright:#F0A85C;
+    --bone:#CBBEA3;       /* exposed lakebed / dust */
+    --waterline:#8A3F2C;  /* historic high-water stain */
+    --ink:#EDE6D7;
+    --muted:#7E8893;
+    --hair:rgba(203,190,163,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--night);color:var(--ink);
+    font-family:"Spectral",Georgia,serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:34px 26px 40px}
+
+  .eyebrow{font-family:"DM Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--copper);margin-bottom:14px}
+  h1{font-weight:300;font-size:clamp(30px,6vw,52px);line-height:1.02;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--bone)}
+  .sub{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:400;
+    color:var(--muted);font-size:15px;max-width:48ch;margin-top:14px;line-height:1.5}
+
+  .stage{margin-top:30px;display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:stretch}
+  @media(max-width:680px){.stage{grid-template-columns:1fr;gap:20px}}
+
+  .panel{position:relative;border:1px solid var(--hair);border-radius:3px;
+    background:linear-gradient(180deg,var(--night-2),var(--night));overflow:hidden}
+
+  /* ---- lake panel ---- */
+  .lake{min-height:300px}
+  .lake svg{display:block;width:100%;height:100%}
+  .panel .tag{position:absolute;left:14px;top:12px;font-family:"DM Mono",monospace;
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);z-index:3}
+
+  /* ---- ring panel ---- */
+  .ring{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px}
+  .ringbox{position:relative;width:230px;max-width:72vw;aspect-ratio:1}
+  .ringbox svg{width:100%;height:100%;transform:rotate(-90deg)}
+  .ringcenter{position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center}
+  .hours{font-family:"Space Grotesk",sans-serif;font-weight:500;
+    font-size:54px;line-height:.9;color:var(--copper-bright)}
+  .hours small{display:block;font-family:"DM Mono",monospace;font-size:10px;font-weight:400;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:9px}
+
+  /* ---- readouts ---- */
+  .readouts{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--hair);border:1px solid var(--hair);border-radius:3px;overflow:hidden}
+  .cell{background:var(--night);padding:16px 18px}
+  .cell .k{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--muted)}
+  .cell .v{font-family:"Space Grotesk",sans-serif;font-size:30px;font-weight:500;margin-top:8px;letter-spacing:-.01em}
+  .cell .v small{font-size:14px;color:var(--muted);font-weight:400}
+
+  /* ---- timeline ---- */
+  .timeline{margin-top:26px}
+  .trow{display:flex;align-items:center;gap:16px}
+  .play{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--hair);
+    background:var(--night-2);color:var(--copper);cursor:pointer;font-size:15px;
+    display:flex;align-items:center;justify-content:center;transition:.2s}
+  .play:hover{border-color:var(--copper);color:var(--copper-bright)}
+  .scrub{flex:1;position:relative}
+  input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:3px;
+    background:linear-gradient(90deg,var(--water-deep),var(--copper) 60%,var(--waterline));
+    border-radius:2px;outline:none;cursor:pointer}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;
+    border-radius:50%;background:var(--ink);border:2px solid var(--night);box-shadow:0 0 0 1px var(--copper)}
+  input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--night);box-shadow:0 0 0 1px var(--copper)}
+  .date{font-family:"DM Mono",monospace;font-size:13px;color:var(--ink);min-width:104px;text-align:right;letter-spacing:.04em}
+
+  .spark{margin-top:18px;height:46px;width:100%}
+  .spark svg{width:100%;height:100%;overflow:visible}
+
+  .foot{margin-top:26px;border-top:1px solid var(--hair);padding-top:16px;
+    font-family:"Space Grotesk",sans-serif;font-size:12px;color:var(--muted);line-height:1.6}
+  .foot b{color:var(--bone);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Zambia · 2024 · one scene of many</div>
+  <h1>The year the lake — <em>and the lights</em> — ran dry.</h1>
+  <p class="sub">One shared timeline. As Lake Kariba drained, Zambia's power drained with it — more than 80% of the grid runs on its water. Scrub through 2024 and watch them fall together.</p>
+
+  <div class="stage">
+    <div class="panel lake">
+      <span class="tag">Lake Kariba · cross-section</span>
+      <svg viewBox="0 0 400 320" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5B9DB4"/>
+            <stop offset="1" stop-color="#1E4555"/>
+          </linearGradient>
+          <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3A332A"/>
+            <stop offset="1" stop-color="#0E1419"/>
+          </linearGradient>
+        </defs>
+        <!-- basin bed -->
+        <rect x="0" y="0" width="400" height="320" fill="url(#bg)"/>
+        <!-- exposed lakebed band (dust) sits above water, drawn full then covered by water -->
+        <rect id="dust" x="0" y="40" width="400" height="0" fill="var(--bone)" opacity=".10"/>
+        <!-- water body -->
+        <rect id="water" x="0" y="40" width="400" height="280" fill="url(#wg)"/>
+        <!-- ripple line at surface -->
+        <rect id="surface" x="0" y="40" width="400" height="2" fill="#9FD0DE" opacity=".55"/>
+        <!-- historic high-water stain -->
+        <line x1="0" y1="46" x2="400" y2="46" stroke="var(--waterline)" stroke-width="1.4" stroke-dasharray="5 5" opacity=".8"/>
+        <text x="392" y="38" text-anchor="end" fill="#B5664E" font-family="DM Mono, monospace" font-size="10" letter-spacing="1">2010 HIGH-WATER MARK</text>
+      </svg>
+    </div>
+
+    <div class="panel ring">
+      <div class="ringbox">
+        <svg viewBox="0 0 100 100">
+          <g id="segs"></g>
+        </svg>
+        <div class="ringcenter">
+          <div class="hours"><span id="hrs">24</span><small>hours of power / day</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="readouts">
+    <div class="cell"><div class="k">Usable storage</div><div class="v"><span id="stor">26</span><small>%</small></div></div>
+    <div class="cell"><div class="k">Lake level</div><div class="v"><span id="lvl">479.2</span><small> m</small></div></div>
+  </div>
+
+  <div class="timeline">
+    <div class="trow">
+      <button class="play" id="play" aria-label="Play">▶</button>
+      <div class="scrub"><input type="range" id="scrub" min="0" max="1000" value="0"></div>
+      <div class="date" id="date">Jan 2024</div>
+    </div>
+    <div class="spark">
+      <svg viewBox="0 0 400 46" preserveAspectRatio="none">
+        <path id="sparkpath" fill="none" stroke="var(--water)" stroke-width="1.6"/>
+        <circle id="sparkdot" r="3" fill="var(--copper-bright)"/>
+      </svg>
+    </div>
+  </div>
+
+  <p class="foot">
+    <b>Concept scene — not the finished app.</b> Values are approximate and illustrative, anchored to real reporting (Zambezi River Authority weekly lake levels; ZESCO/news load-shedding announcements). The real build braids in Sentinel-2 satellite frames, CHIRPS rainfall, and food-security data across five scrolling chapters. This single scene exists to prove the mechanic: <b>many datasets, one synchronized timeline.</b>
+  </p>
+</div>
+
+<script>
+(function(){
+  // --- anchored monthly data for 2024 (approximate, illustrative) ---
+  // storage %  &  hours of mains power/day  &  lake level (m)
+  const months = [
+    {m:"Jan 2024", stor:20.0, hrs:24, lvl:478.8},
+    {m:"Feb 2024", stor:18.4, hrs:23, lvl:478.3},
+    {m:"Mar 2024", stor:16.6, hrs:20, lvl:477.9},
+    {m:"Apr 2024", stor:15.0, hrs:17, lvl:477.6},
+    {m:"May 2024", stor:13.4, hrs:14, lvl:477.3},
+    {m:"Jun 2024", stor:11.8, hrs:12, lvl:477.1},
+    {m:"Jul 2024", stor:10.4, hrs:10, lvl:476.95},
+    {m:"Aug 2024", stor:8.9,  hrs:8,  lvl:476.78},
+    {m:"Sep 2024", stor:8.3,  hrs:5,  lvl:476.70},
+    {m:"Oct 2024", stor:6.6,  hrs:3,  lvl:476.45},
+    {m:"Nov 2024", stor:5.4,  hrs:3,  lvl:476.25},
+    {m:"Dec 2024", stor:4.8,  hrs:3,  lvl:476.10}
+  ];
+
+  const lerp=(a,b,t)=>a+(b-a)*t;
+  function sample(p){ // p in 0..1 across the year
+    const x = p*(months.length-1);
+    const i = Math.min(months.length-2, Math.floor(x));
+    const f = x-i;
+    return {
+      stor: lerp(months[i].stor, months[i+1].stor, f),
+      hrs:  lerp(months[i].hrs,  months[i+1].hrs,  f),
+      lvl:  lerp(months[i].lvl,  months[i+1].lvl,  f),
+      label: f<0.5?months[i].m:months[i+1].m
+    };
+  }
+
+  // --- build 24 ring segments ---
+  const segG=document.getElementById('segs');
+  const N=24, cx=50, cy=50, r=40, gap=3.2;
+  const segEls=[];
+  for(let k=0;k<N;k++){
+    const a0=(k/N)*360+gap/2, a1=((k+1)/N)*360-gap/2;
+    const p=(deg)=>{const rad=deg*Math.PI/180;return [cx+r*Math.cos(rad),cy+r*Math.sin(rad)];};
+    const [x0,y0]=p(a0),[x1,y1]=p(a1);
+    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d',`M ${x0} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y1}`);
+    path.setAttribute('stroke','#2A333C');
+    path.setAttribute('stroke-width','6');
+    path.setAttribute('stroke-linecap','round');
+    path.setAttribute('fill','none');
+    segG.appendChild(path); segEls.push(path);
+  }
+
+  // --- spark path (storage over year) ---
+  const sp=document.getElementById('sparkpath'), dot=document.getElementById('sparkdot');
+  const maxS=Math.max(...months.map(d=>d.stor)), minS=Math.min(...months.map(d=>d.stor));
+  function sy(v){return 42-( (v-minS)/(maxS-minS) )*38 + 2;}
+  let d="";
+  months.forEach((dp,i)=>{const x=(i/(months.length-1))*400; d+=(i?"L":"M")+x+" "+sy(dp.stor)+" ";});
+  sp.setAttribute('d',d);
+
+  // --- elements ---
+  const hrsEl=document.getElementById('hrs'), storEl=document.getElementById('stor'),
+        lvlEl=document.getElementById('lvl'), dateEl=document.getElementById('date'),
+        water=document.getElementById('water'), surface=document.getElementById('surface'),
+        dust=document.getElementById('dust'), scrub=document.getElementById('scrub'),
+        playBtn=document.getElementById('play');
+
+  // water geometry: surface y moves 46 (full) -> 250 (drained) as storage falls
+  function waterY(stor){const t=(stor-minS)/(maxS-minS);return lerp(250,52,t);}
+
+  function render(p){
+    const s=sample(p);
+    const litExact=s.hrs;
+    hrsEl.textContent=Math.round(litExact);
+    storEl.textContent=s.stor.toFixed(1);
+    lvlEl.textContent=s.lvl.toFixed(2);
+    dateEl.textContent=s.label;
+
+    // ring: light segments from top, like a clock filling with daylight
+    segEls.forEach((el,k)=>{
+      const on = k < litExact;
+      const partial = (k < litExact && k+1 > litExact);
+      if(on){
+        el.setAttribute('stroke', partial? '#9A6433' : 'var(--copper)');
+        el.style.filter='drop-shadow(0 0 3px rgba(240,168,92,.5))';
+        el.style.opacity = partial ? (litExact-k) : 1;
+      } else {
+        el.setAttribute('stroke','#222A32');
+        el.style.filter='none'; el.style.opacity=1;
+      }
+    });
+
+    const wy=waterY(s.stor);
+    water.setAttribute('y',wy); water.setAttribute('height',Math.max(0,320-wy));
+    surface.setAttribute('y',wy);
+    dust.setAttribute('height',Math.max(0,wy-46));
+
+    const dx=p*400; dot.setAttribute('cx',dx); dot.setAttribute('cy',sy(s.stor));
+  }
+
+  // interaction
+  let playing=false, raf=null, start=null, dur=9000;
+  function step(ts){
+    if(start===null) start=ts;
+    let p=Math.min(1,(ts-start)/dur);
+    scrub.value=p*1000; render(p);
+    if(p<1){raf=requestAnimationFrame(step);} else {playing=false;playBtn.textContent='↻';}
+  }
+  function play(){
+    if(playing){cancelAnimationFrame(raf);playing=false;playBtn.textContent='▶';return;}
+    if(+scrub.value>=1000){scrub.value=0;}
+    start=null; playing=true; playBtn.textContent='❚❚';
+    // offset start so resuming mid-way works
+    const p0=+scrub.value/1000;
+    let s0=null;
+    raf=requestAnimationFrame(function s(ts){
+      if(s0===null)s0=ts;
+      let p=Math.min(1,p0+(ts-s0)/dur);
+      scrub.value=p*1000; render(p);
+      if(p<1&&playing){raf=requestAnimationFrame(s);}else{playing=false;playBtn.textContent=p>=1?'↻':'▶';}
+    });
+  }
+  playBtn.addEventListener('click',play);
+  scrub.addEventListener('input',()=>{if(playing){cancelAnimationFrame(raf);playing=false;playBtn.textContent='▶';}render(+scrub.value/1000);});
+
+  // respect reduced motion: render a meaningful mid-state, no autoplay
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  render(0);
+  if(!reduce){ setTimeout(play,650); }
+})();
+</script>
+</body>
+</html>

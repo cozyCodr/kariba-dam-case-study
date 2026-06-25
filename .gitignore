@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+.svelte-kit/
+build/
+dist/
+.vercel/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python offline-prep
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Large/raw geodata (kept out of git; see data/README for provenance)
+data/raw/
+*.tif
+*.tiff
+*.nc
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/
