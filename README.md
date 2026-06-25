@@ -9,8 +9,26 @@ day. But the deepest truth is about inequality: the ~90% of rural Zambians the g
 reached still bore the worst of the drought — failed harvests, dead livestock, child
 malnutrition — while national attention fixed on urban blackouts.
 
-> **Status:** project scaffolding. The full build is a five-chapter scrollytelling
-> experience on one synchronized 2024 timeline. See [`docs/build-brief.md`](docs/build-brief.md).
+> **Status:** five chapters built and scrolling on one synchronized 2024 timeline.
+> See [`docs/build-brief.md`](docs/build-brief.md) for the full brief.
+
+## The five chapters
+
+One continuous 2024 clock runs the whole story; scrolling advances time and every
+visual reads from it.
+
+1. **The rains that didn't come** — a Zambia rainfall-deficit map filling province by
+   province (wet north → dry south).
+2. **The lake remembers** — a schematic satellite view of Kariba retreating and the ZRA
+   level line falling.
+3. **The day goes dark** — the signature mechanic: the draining lake cross-section beside
+   the 24-hour ring emptying toward ~3 lit hours.
+4. **The unequal toll** — the map flies from the nation to Southern Province; the
+   50,000-children malnutrition figure counts up.
+5. **What a country runs on** — the lake recovers into 2025–26, but the lesson stands.
+
+A fixed timeline HUD shows the current date, usable storage, and hours of power, so the
+synchronization is always legible.
 
 ## The mechanic
 
@@ -44,11 +62,32 @@ at runtime.
   not measured — it is labeled approximate wherever it appears.
 - Every dataset's source, date, and access method is recorded in the repo and surfaced in-app.
 
+## Run it
+
+```bash
+cd app
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # static build via adapter-vercel
+```
+
+On Vercel, set the project's **Root Directory to `app`**.
+
 ## Repository layout
 
 ```
-concept/   working concept scene proving the core mechanic
-docs/       build brief and design notes
+app/                     SvelteKit app
+  src/lib/story.svelte.ts  the shared 2024 clock (the spine)
+  src/lib/data/            timeline, sources, human stories, provinces, GeoJSON
+  src/lib/components/      Scrolly engine, timeline HUD, human-moment & provenance cards
+  src/lib/visuals/         lake cross-section, power ring, maps, sparklines, counter
+  src/lib/chapters/        the five chapters
+concept/                 working concept scene proving the core mechanic
+docs/                    build brief
 ```
 
-(SvelteKit app, data-prep scripts, and processed assets land here as the build proceeds.)
+The Zambia province boundaries are baked in from geoBoundaries (gbOpen, ADM1) at build
+time. Lake levels, power hours, and province severities are the concept-scene's
+illustrative anchors, clearly labelled; replacing them with the full offline-prep output
+(ZRA bulletins, ZESCO/news chronology, CHIRPS, FEWS NET, Sentinel-2 frames) is the next
+data pass.
