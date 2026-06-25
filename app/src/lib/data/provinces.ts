@@ -1,6 +1,6 @@
 /**
  * Per-province attributes used by the maps. These severities are INDICATIVE,
- * not precise IPC/CHIRPS pixel values — they encode the well-reported pattern
+ * not precise IPC/CHIRPS pixel values - they encode the well-reported pattern
  * that the 2024 drought hit southern and western Zambia hardest (Southern
  * Province singled out for maize and livestock losses). Labeled as indicative
  * wherever shown; precise rasters are a v2 data-prep task.

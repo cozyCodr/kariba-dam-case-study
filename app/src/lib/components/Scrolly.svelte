@@ -4,11 +4,11 @@
 	interface Props {
 		/** Per-step data; one prose step rendered per item */
 		steps: T[];
-		/** The sticky visual; receives chapter-local progress (0–1) and active index */
+		/** The sticky visual; receives chapter-local progress (0-1) and active index */
 		graphic: Snippet<[{ progress: number; active: number }]>;
 		/** A prose step; receives its data, index, and whether it is active */
 		step: Snippet<[T, number, boolean]>;
-		/** Reports chapter-local progress (0–1) and active step on every change */
+		/** Reports chapter-local progress (0-1) and active step on every change */
 		onmove?: (state: { progress: number; active: number }) => void;
 	}
 
@@ -30,7 +30,7 @@
 	}
 
 	// Continuous progress, driven directly from scroll position. This is the
-	// spine of the synchronized timeline — smoother and more robust than
+	// spine of the synchronized timeline - smoother and more robust than
 	// IntersectionObserver progress, which depends on viewport-height math.
 	function measure() {
 		if (!container) return;
@@ -67,7 +67,7 @@
 
 	onMount(() => {
 		// Direct measure on each scroll: cheap (a handful of getBoundingClientRect
-		// reads) and robust — it doesn't depend on requestAnimationFrame firing,
+		// reads) and robust - it doesn't depend on requestAnimationFrame firing,
 		// which some embedded renderers gate behind paint.
 		const onScroll = () => measure();
 

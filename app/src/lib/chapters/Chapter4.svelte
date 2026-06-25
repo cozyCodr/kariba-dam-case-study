@@ -43,13 +43,13 @@
 					<p>While the cities counted blackout hours, another Zambia went largely uncounted.</p>
 					<div class="prov"><Provenance id="rural_access" /></div>
 				{:else if i === 1}
-					<p>Around <b>90%</b> of rural Zambians never had grid power to lose in the first place. Their crisis was not the lights — it was the <b>harvest</b>.</p>
+					<p>Around <b>90%</b> of rural Zambians never had grid power to lose in the first place. Their crisis was not the lights. It was the <b>harvest</b>.</p>
 				{:else if i === 2}
 					<p><b>Southern Province</b> was singled out in the reporting: scorched maize, dying livestock, families selling what animals survived.</p>
 					<div class="prov"><Provenance id="food_security" /></div>
 				{:else if i === 3}
 					<p class="bignum"><Counter value={50000} active={active} suffix="+" /></p>
-					<p>children under five at risk of severe wasting — the deadliest form of malnutrition.</p>
+					<p>children under five at risk of severe wasting, the deadliest form of malnutrition.</p>
 					<div class="prov"><Provenance id="malnutrition" /></div>
 				{:else}
 					<HumanMoment moment={rural} />

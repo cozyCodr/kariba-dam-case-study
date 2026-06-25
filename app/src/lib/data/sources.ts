@@ -22,7 +22,7 @@ export const sources: Record<string, Source> = {
 		id: 'kariba_storage',
 		label: 'Kariba usable storage',
 		detail:
-			'~8.3% usable storage on 2 Sep 2024, versus ~26% a year earlier — a record low for the reservoir.',
+			'~8.3% usable storage on 2 Sep 2024, versus ~26% a year earlier, a record low for the reservoir.',
 		publisher: 'Zambezi River Authority',
 		date: '2024-09-02',
 		access: 'Compiled from ZRA weekly hydrology bulletins into a 2024 series.',
@@ -45,7 +45,7 @@ export const sources: Record<string, Source> = {
 		publisher: 'ZESCO announcements & news reporting',
 		date: '2024',
 		access:
-			'No clean feed exists. Assembled as a dated chronology from ZESCO statements and news reports — approximate, not measured.',
+			'No clean feed exists. Assembled as a dated chronology from ZESCO statements and news reports; approximate, not measured.',
 		approximate: true
 	},
 	grid_hydro: {
@@ -60,7 +60,7 @@ export const sources: Record<string, Source> = {
 		id: 'rural_access',
 		label: 'Rural electricity access',
 		detail:
-			'Around 90% of rural Zambians lacked electricity access before the crisis — they never had the grid power the country mourned losing.',
+			'Around 90% of rural Zambians lacked electricity access before the crisis. They never had the grid power the country mourned losing.',
 		publisher: 'World Bank / national statistics',
 		date: '2023',
 		access: 'Pre-crisis baseline; cited at point of use.'
@@ -69,7 +69,7 @@ export const sources: Record<string, Source> = {
 		id: 'rainfall',
 		label: 'Rainfall anomaly',
 		detail:
-			'The 2023–24 rainy season delivered a severe deficit across southern and western Zambia during the planting window.',
+			'The 2023-24 rainy season delivered a severe deficit across southern and western Zambia during the planting window.',
 		publisher: 'CHIRPS (Climate Hazards Center)',
 		date: '2024',
 		access: 'CHIRPS rainfall + anomaly, exported via Climate Engine / Earth Engine.',
@@ -88,7 +88,7 @@ export const sources: Record<string, Source> = {
 		id: 'malnutrition',
 		label: 'Child malnutrition risk',
 		detail:
-			'More than 50,000 children under five at risk of severe wasting — the deadliest form of malnutrition — across drought-hit areas.',
+			'More than 50,000 children under five at risk of severe wasting, the deadliest form of malnutrition, across drought-hit areas.',
 		publisher: 'UNICEF',
 		date: '2024',
 		access: 'UNICEF Zambia drought response reporting.',

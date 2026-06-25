@@ -40,13 +40,13 @@
 		{#snippet step(_i, i)}
 			<div class="prose">
 				{#if i === 0}
-					<p>More than <b>80%</b> of Zambia's electricity comes from moving water — most of it through Kariba's turbines.</p>
+					<p>More than <b>80%</b> of Zambia's electricity comes from moving water, most of it through Kariba's turbines.</p>
 					<div class="prov"><Provenance id="grid_hydro" /></div>
 				{:else if i === 1}
 					<p>As the lake fell, ZESCO began rationing power. On <b>14 September 2024</b> it announced the Kariba North Bank station would shut down entirely.</p>
 					<div class="prov"><Provenance id="power_hours" /></div>
 				{:else if i === 2}
-					<p>Load-shedding stretched toward <b>20 hours a day</b>. For many households, the grid came to mean roughly <b>three lit hours</b> — a day mostly spent in the dark.</p>
+					<p>Load-shedding stretched toward <b>20 hours a day</b>. For many households, the grid came to mean roughly <b>three lit hours</b>: a day mostly spent in the dark.</p>
 				{:else if i === 3}
 					<HumanMoment moment={cafe} />
 				{:else if i === 4}

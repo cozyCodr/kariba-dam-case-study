@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>When the Lake Ran Dry — Zambia's 2024 drought</title>
+	<title>When the Lake Ran Dry: Zambia's 2024 drought</title>
 </svelte:head>
 
 <TimelineHud />
@@ -17,9 +17,9 @@
 <main>
 	<section class="hero">
 		<p class="eyebrow">Zambia · 2024</p>
-		<h1>The year the lake — <em>and the lights</em> — ran dry.</h1>
+		<h1>The year the lake, <em>and the lights</em>, ran dry.</h1>
 		<p class="standfirst">
-			An El&nbsp;Niño drought drained Lake Kariba — the source of over 80% of Zambia's electricity —
+			An El&nbsp;Niño drought drained Lake Kariba, the source of over 80% of Zambia's electricity,
 			to record lows, and the country fell dark. But the people the grid never reached paid the
 			most. Scroll through 2024 and watch the water, the light, and the harvest fall together.
 		</p>

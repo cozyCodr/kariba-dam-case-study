@@ -1,5 +1,5 @@
 /**
- * The shared 2024 timeline — the spine of the whole story.
+ * The shared 2024 timeline - the spine of the whole story.
  *
  * Every visual (lake cross-section, satellite frames, the 24-hour ring, the
  * level line, the map pan) reads its state from one normalized progress value
@@ -9,7 +9,7 @@
  * NOTE: these are the concept-scene's approximate, illustrative anchors. They
  * will be replaced by values from the offline Python prep (ZRA weekly lake
  * levels; ZESCO/news load-shedding chronology). The hours-of-power series is
- * assembled from announcements, not measured — label it approximate in-app.
+ * assembled from announcements, not measured - label it approximate in-app.
  */
 
 export interface TimelinePoint {

@@ -8,7 +8,7 @@ import { sampleTimeline, type TimelineSample } from './data/timeline';
 class StoryClock {
 	/** Global progress across 2024, [0, 1] */
 	p = $state(0);
-	/** Which chapter is currently on stage (1–5), 0 = intro */
+	/** Which chapter is currently on stage (1-5), 0 = intro */
 	chapter = $state(0);
 
 	get sample(): TimelineSample {
@@ -45,7 +45,7 @@ export const chapters: ChapterMeta[] = [
 	{ n: 5, id: 'runs-on', title: 'What a country runs on', kicker: 'Chapter Five', range: [1.0, 1.0] }
 ];
 
-/** Map a chapter's local progress (0–1) into the global year progress. */
+/** Map a chapter's local progress (0-1) into the global year progress. */
 export function chapterToGlobal(meta: ChapterMeta, local: number): number {
 	const [a, b] = meta.range;
 	return a + (b - a) * Math.max(0, Math.min(1, local));

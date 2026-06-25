@@ -1,5 +1,5 @@
 <script lang="ts">
-	// The draining lake cross-section (Chapters 2–3) — ported from the concept
+	// The draining lake cross-section (Chapters 2-3) - ported from the concept
 	// scene. The water surface falls as usable storage drops, exposing pale
 	// lakebed beneath the brick-red historic high-water stain.
 	import { storageDomain } from '$lib/data/timeline';

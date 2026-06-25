@@ -1,5 +1,5 @@
 <script lang="ts">
-	// The 24-hour "day going dark" ring (Chapter 3) — ported from the concept
+	// The 24-hour "day going dark" ring (Chapter 3) - ported from the concept
 	// scene. Each segment is an hour; lit (copper) segments fill from the top
 	// like a clock catching daylight. As power hours fall, the day empties.
 	let { hours = 24, size = 300 }: { hours?: number; size?: number } = $props();

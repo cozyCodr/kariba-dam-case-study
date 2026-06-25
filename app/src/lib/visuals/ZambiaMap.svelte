@@ -17,7 +17,7 @@
 	const H = 460;
 
 	// Build the projection + path generator once (runs at SSR + client).
-	// geoIdentity uses PLANAR geometry, so it ignores ring-winding direction —
+	// geoIdentity uses PLANAR geometry, so it ignores ring-winding direction -
 	// geoBoundaries polygons are clockwise, which spherical geoMercator would
 	// read as inverted (collapsing the fit and filling the viewBox solid).
 	// reflectY flips latitude so north points up in SVG space.

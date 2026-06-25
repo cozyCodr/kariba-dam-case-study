@@ -37,12 +37,12 @@
 		{#snippet step(_i, i)}
 			<div class="prose">
 				{#if i === 0}
-					<p>Kariba is not a natural lake but a memory of the Zambezi — the river dammed in 1959, its valley filled, its old shoreline drowned.</p>
+					<p>Kariba is not a natural lake but a memory of the Zambezi, the river dammed in 1959, its valley filled, its old shoreline drowned.</p>
 				{:else if i === 1}
 					<p>Through 2024 the water pulled back from its banks, exposing pale lakebed and, at the old edge, a <b>brick-red stain</b> marking where the lake once stood.</p>
 					<div class="prov"><Provenance id="satellite" /></div>
 				{:else if i === 2}
-					<p>By <b>2 September 2024</b>, usable storage had fallen to about <b>8.3%</b> — against roughly 26% a year earlier. A record low.</p>
+					<p>By <b>2 September 2024</b>, usable storage had fallen to about <b>8.3%</b>, against roughly 26% a year earlier. A record low.</p>
 					<div class="prov"><Provenance id="kariba_storage" /></div>
 				{:else if i === 3}
 					<HumanMoment moment={fisher} />

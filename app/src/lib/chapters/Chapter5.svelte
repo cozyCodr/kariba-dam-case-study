@@ -35,7 +35,7 @@
 		{#snippet graphic()}
 			<div class="viz-stage">
 				<RecoveryLine progress={localProgress} />
-				<p class="viz-cap">Kariba usable storage, 2024–2026 · illustrative, anchored to ZRA reporting</p>
+				<p class="viz-cap">Kariba usable storage, 2024-2026 · illustrative, anchored to ZRA reporting</p>
 			</div>
 		{/snippet}
 

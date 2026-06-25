@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Chapter 5: the longer arc. Kariba's usable storage from the 2024 collapse
-	// through the 2025–26 recovery — the lake refilled, but the lesson stands.
+	// through the 2025-26 recovery: the lake refilled, but the lesson stands.
 	// Values illustrative, anchored to ZRA reporting that levels recovered.
 	let { progress = 0 }: { progress?: number } = $props();
 
@@ -35,10 +35,10 @@
 	const totalLen = 1600;
 </script>
 
-<svg viewBox="0 0 {W} {H}" class="rec" role="img" aria-label="Kariba storage recovery 2024–2026">
+<svg viewBox="0 0 {W} {H}" class="rec" role="img" aria-label="Kariba storage recovery 2024-2026">
 	<line x1={padX} y1={y(0)} x2={W - padX} y2={y(0)} stroke="var(--hair)" />
 	<line x1={padX} y1={y(26)} x2={W - padX} y2={y(26)} stroke="var(--hair)" stroke-dasharray="3 4" />
-	<text x={padX} y={y(26) - 5} class="ax">~26% — a year before the drought</text>
+	<text x={padX} y={y(26) - 5} class="ax">~26%, a year before the drought</text>
 
 	<path
 		d={linePath}

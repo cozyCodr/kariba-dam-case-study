@@ -1,5 +1,5 @@
 <script lang="ts">
-	// A SCHEMATIC top-down view of Lake Kariba retreating — a stand-in for the
+	// A SCHEMATIC top-down view of Lake Kariba retreating: a stand-in for the
 	// pre-rendered Sentinel-2 frames the final build braids in (labeled as such).
 	// The water polygon contracts toward the river channel as storage falls,
 	// exposing pale former-lakebed inside the historic shoreline.
@@ -44,7 +44,7 @@
 	</g>
 
 	<text x="548" y="206" class="tag" text-anchor="end">KARIBA DAM</text>
-	<text x="24" y="296" class="note">Schematic — stands in for pre-rendered Sentinel-2 frames</text>
+	<text x="24" y="296" class="note">Schematic: stands in for pre-rendered Sentinel-2 frames</text>
 </svg>
 
 <style>

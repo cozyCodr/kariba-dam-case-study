@@ -1,5 +1,5 @@
 /* =========================================================================
-   When the Lake Ran Dry — design tokens
+   When the Lake Ran Dry - design tokens
    Palette grounded in the subject (see docs/build-brief.md §7 and the concept
    scene). Nightfall ground, receding Zambezi blue, copper for light, bone for
    the exposed lakebed, brick-red for the historic waterline.
@@ -52,7 +52,7 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-/* Motion serves meaning — when the reader opts out, hold meaningful states. */
+/* Motion serves meaning - when the reader opts out, hold meaningful states. */
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;

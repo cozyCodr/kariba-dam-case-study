@@ -17,12 +17,12 @@
 				<li>
 					<b>Real, sourced people</b> carry on-screen attribution. Where an immersive “a day in the
 					life” beat is needed, it is shown as a <b>clearly-labeled representative scene</b>, grounded
-					in documented conditions — never a composite passed off as one real person, never an
+					in documented conditions. Never a composite passed off as one real person, never an
 					invented quote put in a real person's mouth.
 				</li>
 				<li>
 					The <b>hours-of-power series is assembled</b> from ZESCO announcements and news reports, not
-					measured — it is labeled approximate wherever it appears. Province severities are
+					measured, and is labeled approximate wherever it appears. Province severities are
 					indicative of the well-reported pattern, not precise pixel values.
 				</li>
 			</ul>
