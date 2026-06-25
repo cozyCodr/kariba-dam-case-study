@@ -1,0 +1,93 @@
+/* =========================================================================
+   When the Lake Ran Dry — design tokens
+   Palette grounded in the subject (see docs/build-brief.md §7 and the concept
+   scene). Nightfall ground, receding Zambezi blue, copper for light, bone for
+   the exposed lakebed, brick-red for the historic waterline.
+   ========================================================================= */
+
+:root {
+	/* --- core palette --- */
+	--night: #0e1419;        /* blackout ground */
+	--night-2: #141c24;
+	--water: #3e7e97;        /* Zambezi water */
+	--water-deep: #27566a;
+	--water-bright: #5b9db4;
+	--copper: #d2853f;       /* electricity / light */
+	--copper-bright: #f0a85c;
+	--bone: #cbbea3;         /* exposed lakebed / dust */
+	--waterline: #8a3f2c;    /* historic high-water stain */
+	--ink: #ede6d7;
+	--muted: #7e8893;
+	--hair: rgba(203, 190, 163, 0.14);
+
+	/* --- type --- */
+	--font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+	--font-ui: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+	--font-mono: 'DM Mono', ui-monospace, 'SF Mono', monospace;
+
+	/* --- rhythm --- */
+	--measure: 60ch;
+	--ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--night);
+	color: var(--ink);
+	font-family: var(--font-display);
+	font-weight: 300;
+	line-height: 1.55;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+/* Motion serves meaning — when the reader opts out, hold meaningful states. */
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+}
+
+/* Shared text primitives reused across chapters */
+.eyebrow {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	letter-spacing: 0.32em;
+	text-transform: uppercase;
+	color: var(--copper);
+}
+
+.mono {
+	font-family: var(--font-mono);
+}
+
+a {
+	color: var(--copper);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--copper-bright);
+}
+
+:focus-visible {
+	outline: 2px solid var(--copper-bright);
+	outline-offset: 3px;
+}
